@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration</title>
+  <style>
+    body {
+      background-color: red;
+      color: white;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    h2 {
+      text-align: center;
+      color: white;
+      padding: 20px;
+      background-color: darkred;
+      margin: 0;
+    }
+    form {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    table {
+      background-color: red;
+      padding: 20px;
+      border: 1px dotted black;
+      border-radius: 15px;
+    }
+    td {
+      padding: 10px;
+      vertical-align: top;
+    }
+    input[type="text"], input[type="email"], input[type="tel"], input[type="date"], textarea, select {
+      width: 300px;
+      padding: 5px;
+      resize: vertical;
+    }
+    input[type="submit"], input[type="reset"] {
+      padding: 8px 20px;
+      margin: 10px;
+      font-weight: bold;
+      background-color: white;
+      color: red;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover, input[type="reset"]:hover {
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+  <h2>Student Registration Form</h2>
+  <form action="register.php" method="POST">
+    <table>
+      <tr><td>First Name:</td><td><input type="text" name="first_name" required></td></tr>
+      <tr><td>Last Name:</td><td><input type="text" name="last_name" required></td></tr>
+      <tr><td>Email:</td><td><input type="email" name="email" required></td></tr>
+      <tr><td>Mobile:</td><td><input type="tel" name="mobile" required></td></tr>
+      <tr><td>Gender:</td><td>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+      </td></tr>
+      <tr><td>Date of Birth:</td><td><input type="date" name="dob"></td></tr>
+      <tr><td>Address:</td><td><textarea name="address" rows="3"></textarea></td></tr>
+      <tr><td>City:</td><td><input type="text" name="city"></td></tr>
+      <tr><td>Pin Code:</td><td><input type="text" name="pin_code"></td></tr>
+      <tr><td>State:</td><td><input type="text" name="state"></td></tr>
+      <tr><td>Country:</td><td><input type="text" name="country"></td></tr>
+      <tr><td>Hobbies:</td><td>
+        <input type="checkbox" name="hobbies[]" value="Reading"> Reading
+        <input type="checkbox" name="hobbies[]" value="Music"> Music
+        <input type="checkbox" name="hobbies[]" value="Sports"> Sports
+      </td></tr>
+      <tr><td>Qualification:</td><td><input type="text" name="qualification"></td></tr>
+      <tr><td>Courses Applied:</td><td><input type="text" name="courses_applied"></td></tr>
+      <tr><td colspan="2" style="text-align:center">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </td></tr>
+    </table>
+  </form>
+</body>
+</html>
